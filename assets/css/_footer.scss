@@ -1,0 +1,158 @@
+/**
+	FOOTER WIDGET AREA STYLE CSS
+ */
+.footer-widget-area {
+	padding: 60px;
+	background: #1a1b21;
+}
+.widget-post-tab-area {
+	ul{
+		&.tabs-indicator{
+			list-style: none;
+			padding-left: 0;
+			overflow: hidden;
+			margin-bottom: 15px;
+			li {
+				float: left;
+				background: #111;
+				border-top: 2px solid #111;
+				&.active {
+					border-top: 2px solid #f4f4f4;
+					background: transparent;
+				}
+				a {
+					font-size: 22px;
+					font-weight: 600;
+					display: block;
+					padding: 10px 40px;
+					border-right: 1px solid #1a1b21;
+					transition: .35s;
+					&:hover {
+						color: #777;
+					}
+					&:focus {
+						color: #777;
+					}
+				}
+			}
+		}
+	}
+}
+
+.widget-tab-item {
+	padding: 15px;
+}
+.widget-tab-thumbnail {
+	float: left;
+	margin-right: 13px;
+	width: 52px;
+}
+.widget-tab-content {
+	overflow: hidden;
+}
+.widget-comment-author {
+	color: #777;
+	font-size: 17px;
+	margin-bottom: 5px;
+	display: block;
+}
+.widget-tab-title {
+	a {
+		color: #777;
+		font-size: 17px;
+		margin-bottom: 5px;
+		display: block;
+	}
+}
+.widget-meta-date {
+	font-size: 15px;
+}
+.footer-social-icon {
+	a {
+		display: inline-block;
+		width: 45px;
+		height: 45px;
+		line-height: 45px;
+		text-align: center;
+		border-radius: 50%;
+		font-size: 18px;
+		color: #ffffff;
+		background-color: #06c7c0;
+		margin: 0 3.5px 10px;
+		transition: .35s;
+		&:hover{
+			background: $hover-color;
+		}
+	}
+}
+
+/**
+	FOOTER AREA STYLE CSS
+ */
+.footer-area {
+	background: #121316;
+	padding: 20px 0;
+	font-size: 14px;
+}
+.footer-notice {
+	padding: 20px 50px;
+}
+.footer-menu-area {
+	padding-bottom: 10px;
+}
+.footer-widget {
+	.widget-title {
+		color: #fff;
+	}
+}
+.footer-widget #menu-footer-widget-menu,
+.footer-menu-area ul {
+	list-style: none;
+}
+.footer-widget #menu-footer-widget-menu {
+	margin-left: -10px;
+}
+.footer-widget #menu-footer-widget-menu li,
+.footer-menu-area ul li {
+	display: inline-block;
+	position: relative;
+	line-height: 1;
+}
+
+.footer-widget #menu-footer-widget-menu li {
+	margin-bottom: 12px;
+}
+.footer-widget #menu-footer-widget-menu li:before,
+.footer-menu-area ul li:before {
+	position: absolute;
+	content: '';
+	top: 0;
+	right: 0;
+	width: 1px;
+	height: 100%;
+	background: #777;
+}
+.footer-widget #menu-footer-widget-menu li:before {
+	background: #CCCCCC;
+}
+.footer-widget #menu-footer-widget-menu li:last-child:before,
+.footer-menu-area ul li:last-child:before {
+	display: none;
+}
+.footer-menu-area ul li a {
+	display: block;
+	font-weight: bold;
+	margin: 0 15px 0 10px;
+	line-height: 1;
+	transition: .35s;
+}
+.footer-widget #menu-footer-widget-menu li a{
+	color: #CCCCCC;
+	font-size: 16px;
+	line-height: 1;
+	margin: 0 15px 0 10px;
+}
+.footer-widget #menu-footer-widget-menu li a:hover,
+.footer-menu-area ul li a:hover {
+	color: #fff;
+}

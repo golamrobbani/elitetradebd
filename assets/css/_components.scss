@@ -1,0 +1,289 @@
+/**
+BREADCRUMB AREA STYLE CSS
+*/
+.breadcrumb-area {
+	padding: 80px 0 80px;
+	background: #eee;
+	.breadcrumb-title {
+		font-weight: 600;
+		font-size: 38px;
+	}
+}
+/**
+PRODUCT TYPE STYLE CSS
+*/
+.etbd-product-type{
+	margin-bottom:40px!important;
+	.etbd-product-type-header{
+		border-bottom: #d5d5d5 1px solid;
+		height: 60px;
+		line-height: 60px;
+		margin-bottom: 5px;
+		vertical-align: middle;
+		background: #fff;
+		padding: 0 10px;
+	}
+	.no-border{
+		background: none;
+		border: none;
+		height: 40px;
+		line-height: 40px;
+		.etbd-product-type-title {
+			line-height: 40px;
+			display: inline-block;
+			font-size: 22px;
+			color: #424242;
+		}
+
+	}
+
+	.etbd-edproduct-type-body{
+		.col-md-2,
+		.col-md-3{
+			padding: 5px;
+			}.row {
+				margin: 0 -5px;
+			}
+		}
+
+	}
+
+/**
+PRODUCT CARD STYLE CSS
+*/
+.product-card{
+
+	-webkit-transition: all 0.36s;
+	transition: all 0.36s;
+	display: block;
+	padding: 10px;
+	border: 1px solid #efefef;
+	background: #fff;
+	.product-card-img {
+		border: 4px double #efefef;
+		padding: 5px;
+		margin-bottom: 10px;
+	}
+	.product-card-title{
+		color: #777;
+		font-weight: 700;
+		margin-bottom: 8px;
+		display: inline-block;
+		font-size: 16px;
+	}
+	.product-card-brand{
+		margin-bottom: 10px;
+	}
+	.product-card-price{
+		font-size: 16px;
+		margin-bottom: 8px;
+		font-weight: 600;
+	}
+	&:hover{
+		box-shadow: 0 2px 4px 0 rgba(0,0,0,.25);
+	}
+}
+/**
+ load-more STYLE CSS
+ */
+ a.load-more-posts-btn {
+ 	margin: 0 auto;
+ 	margin-top: 40px;
+ 	display: block;
+ 	width: 300px;
+ 	height: 40px;
+ 	line-height: 40px;
+ 	text-align: center;
+ 	font-size: 14px;
+ 	cursor: pointer;
+ 	font-weight: 600;
+ 	background: #1cd6c3!important;
+ 	border: none;
+ 	border-radius: 0;
+ 	outline: 0;
+ 	color: #fff;
+ 	letter-spacing: 1px;
+ 	text-transform: uppercase;
+ }
+/**
+FEATURE SLIDER  STYLE CSS
+*/
+.feature-area{
+	margin-top: 120px;
+	max-height: 329px;
+	.feature-inner{
+		position: relative;
+		.catagory-listing-menu{
+			position: absolute;
+			top: 0;
+			left: 331px;
+			z-index: 111;
+			background: #fff;
+			width: 200px;
+			height: 100%;
+			box-shadow: 0 0 2px 0 rgba(0,0,0,.25);
+			ul{
+				list-style: none;
+				padding-left: 0;
+				padding: 8px 0 12px;
+				height: 100%;
+				margin: 0;
+				li{
+					&:hover>.sub-menu{
+						display: block;
+					}
+					.sub-menu{
+						padding: 8px 0 12px;   
+						position: absolute;
+						width: 200px;
+						height: 100%;
+						list-style: none;
+						margin: 0;
+						left: 200px;
+						top: 0;
+						background: #fff;
+						box-shadow: 0 0 4px 0 rgba(0,0,0,.25);
+						display: none;
+					}
+					a{
+						display: block;
+						padding-left: 8px;
+						line-height: 27px;
+						text-decoration: none;
+						font-size: 15px;
+						&:hover{
+							background:#eceff1;
+						}
+						
+					}
+					.angle-right{
+						position: relative;
+					}
+					.angle-right:after{
+						position:absolute;
+						top: 0;
+						right: 0;
+						content: '\203A';
+						font-size: 27px;
+						height: 27px;
+						line-height: 20px;
+						padding-right: 8px;
+					}
+
+				}
+			}
+		}
+	}
+	.feature-sliders{
+		.owl-controls{
+			margin-top: 0;
+		}
+		.owl-dots {
+			position: absolute;
+			top: 90%;
+			left: 50%;
+			margin-left: -66px;
+		}
+
+	}
+	
+
+}
+
+
+/**
+TESTIMONIAL AREA STYLE CSS
+*/
+.testimonial-area {
+	padding: 70px 0;
+	.single-testimonial {
+		img {
+			width: 70px !important;
+			margin: 25px auto;
+			background: #ddd;
+			border-radius: 35px !important;
+		}
+		.testimonial-author {
+			font-size: 17px;
+			color: #777;
+			font-family: $font-family-open-sans;
+		}
+	}
+	.single-testimonial-content {
+		margin: 0 60px;
+		font-size: 22px;
+		font-style: italic;
+		font-family: $font-family-open-sans;
+		position: relative;
+		&:before {
+			content: '\f10d';
+			left: -56px;
+			top: 0;
+			font-family: FontAwesome;
+			color: #cdcdcd;
+			font-size: 36px;
+			font-style: normal;
+			line-height: 36px;
+			position: absolute;
+			width: 36px;
+		}
+		&:after {
+			content: '\f10e';
+			right: -56px;
+			bottom: 0;
+			font-family: FontAwesome;
+			color: #cdcdcd;
+			font-size: 36px;
+			font-style: normal;
+			line-height: 36px;
+			position: absolute;
+			width: 36px;
+		}
+	}
+}
+
+.popular-product-slide{
+	position: relative;
+	.owl-theme {
+		.custom-nav {
+			position: absolute;
+			top: 20%;
+			left: 0;
+			right: 0;
+
+			.owl-prev, .owl-next {
+				position: absolute;
+				height: 100px;
+				color: inherit;
+				background: none;
+				border: none;
+				z-index: 100;
+
+				i {
+					font-size: 2.5rem;
+					color: #cecece;
+				}
+			}
+
+			.owl-prev {
+				left: 0;
+			}
+
+			.owl-next {
+				right: 0;
+			}
+		}
+    }
+}
+
+ 
+
+.toolbar-area {
+    padding: 0 8px 10px;
+	.t-info span {
+	    padding: 0 5px;
+	    display: inline-block;
+	    color:#c54747;
+	}
+
+}

@@ -1,0 +1,18 @@
+/*!
+ * themeplate
+ * Main CSS file
+ */
+
+@import "variable";
+@import "../vendor/slick/slick";
+@import "../vendor/slick/slick-theme";
+@import "../vendor/owlcarousel/owl.carousel";
+@import "bootstrap";
+@import "font-awesome";
+@import "reset";
+@import "header";
+@import "components";
+@import "edd-reset";
+@import "footer";
+@import "wp";
+@import "responsive";

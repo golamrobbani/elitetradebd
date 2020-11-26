@@ -1,0 +1,814 @@
+// Some basic padding for all wrappers
+.wrapper {
+  padding:$grid-gutter-width 0;
+}
+
+// Adding basic Wordpress classes to pass the Wordpress.org tests
+.sticky, .gallery-caption, .bypostauthor {
+  font-size:inherit;
+}
+
+// Separate sticky wrapper from main content
+.wrapper#wrapper-sticky {
+  border-bottom:1px solid $gray-light;
+}
+
+// Necessary WP classes
+.wp-caption {
+  font-size: inherit;
+}
+
+.wp-caption-text {
+  font-size: inherit;
+}
+
+.screen-reader-text {
+  font-size: inherit;
+  word-wrap: normal !important;
+}
+
+//Limit featured image size to 100%
+img.wp-post-image, article img, figure, #secondary img {
+  max-width: 100%;
+}
+
+// Skip to content link
+a.skip-link{
+  z-index: 1000;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+}
+
+// Reset Jumbotron default margin
+.jumbotron {
+  margin-bottom:0px;
+}
+
+//Bootstrap3 to Bootstrap4 "translation"
+//.menu-item {float:left; width:auto; display:inline;}
+
+// Fixing BS dropdown in a dropdown
+.dropdown-menu .dropdown-menu {
+  position:relative;
+  display:block;
+  border: none;
+  box-shadow: none;
+  margin-left:30px;
+  width:120px;
+  li {
+    list-style: square;
+    padding-left: 0px;
+
+    a {
+      padding-left:10px;
+      padding-right:10px;
+    }
+  }
+}
+/*--------------------------------------------------------------
+# Accessibility
+--------------------------------------------------------------*/
+/* Text meant only for screen readers. */
+.screen-reader-text {
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute !important;
+	width: 1px;
+	word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+}
+
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	clip-path: none;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000;
+	/* Above WP toolbar. */
+}
+
+/* Do not show the outline on the skip link target. */
+#content[tabindex="-1"]:focus {
+	outline: 0;
+}
+
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 1.5em;
+}
+
+.alignright {
+	display: inline;
+	float: right;
+	margin-left: 1.5em;
+}
+
+.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/*--------------------------------------------------------------
+# Captions CSS
+--------------------------------------------------------------*/
+.wp-caption {
+	margin-bottom: 1.5em;
+	max-width: 100%;
+}
+.wp-caption img[class*="wp-image-"] {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+.wp-caption .wp-caption-text {
+	margin: 0.8075em 0;
+}
+.wp-caption-text {
+	text-align: center;
+}
+
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+.widget {
+	margin: 0 0 1.5em;
+	/* Make sure select elements fit in widgets. */
+}
+
+.widget select {
+	max-width: 100%;
+}
+
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/
+article.sticky {
+	position: relative
+}
+article.sticky:after {
+	content: "\f08d";
+	font-family: FontAwesome;
+	font-size: 30px;
+	position: absolute;
+	right: 5px;
+	top: -5px;
+	-webkit-transform: rotate(30deg);
+	transform: rotate(30deg);
+}
+.sticky {
+	display: block;
+}
+
+.hentry {
+	margin: 0 0 1.5em;
+}
+
+.updated:not(.published) {
+	display: none;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+	/*margin: 1.5em 0 0;*/
+}
+
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+
+.entry-content h1,
+.entry-content h2,
+.entry-content h3,
+.entry-content h4,
+.entry-content h5,
+.entry-content h6 {
+	margin-bottom: 10px;
+}
+.comment-content h1,
+.comment-content h2,
+.comment-content h3,
+.comment-content h4,
+.comment-content h5,
+.comment-content h6 {
+	margin-bottom: 10px;
+}
+/*--------------------------------------------------------------
+# Galleries CSS, Widgets CSS, Page CSS
+--------------------------------------------------------------*/
+.gallery {
+	margin-bottom: 1.5em;
+}
+.gallery-item {
+	display: inline-block;
+	text-align: center;
+	vertical-align: top;
+	width: 100%;
+}
+.gallery-columns-2 .gallery-item {
+	max-width: 50%;
+}
+.gallery-columns-3 .gallery-item {
+	max-width: 33.33%;
+}
+.gallery-columns-4 .gallery-item {
+	max-width: 25%;
+}
+.gallery-columns-5 .gallery-item {
+	max-width: 20%;
+}
+.gallery-columns-6 .gallery-item {
+	max-width: 16.66%;
+}
+.gallery-columns-7 .gallery-item {
+	max-width: 14.28%;
+}
+.gallery-columns-8 .gallery-item {
+	max-width: 12.5%;
+}
+.gallery-columns-9 .gallery-item {
+	max-width: 11.11%;
+}
+.gallery-caption {
+	display: block;
+}
+.blog article {
+	overflow: hidden;
+}
+.post-thumbnail {
+	margin-bottom: 20px;
+}
+article.post,
+article.page,
+.widget {
+	margin-bottom: 30px;
+}
+article.post a.button {
+	margin-top: 10px
+}
+.entry-header {
+	margin-bottom: 20px;
+}
+.entry-header .entry-title {
+	display: inline-block;
+	font-size: 24px;
+	margin: 10px 0;
+	color: #333;
+}
+.entry-title {
+	margin-bottom: 15px;
+	font-size: 28px;
+	font-weight: 600;
+}
+article.post a,
+article.page a,
+.entry-header a:hover,
+.entry-header .entry-title a,
+.entry-header .entry-title a:hover {
+	word-break: break-word;
+	color: #333
+}
+.entry-meta,
+.entry-footer {
+	opacity: .7;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+}
+.entry-meta {
+	font-size: 13px
+}
+.entry-footer {
+	display: block;
+	clear: both;
+	height: auto;
+	overflow: hidden;
+	font-size: 14px;
+	margin: 20px 0px;
+	padding: 10px 0px;
+	border-top: 1px solid #e0dede;
+	border-bottom: 1px solid #e0dede;
+}
+.entry-footer .cat-links,
+.entry-footer .tags-links,
+.entry-footer .edit-links {
+	padding-right: 15px;
+	display: inline-block;
+}
+a.read-more {float: right;}
+
+a.read-more i {
+	margin-left: 5px;
+}
+.entry-meta > span {
+	padding-right: 15px;
+}
+.entry-meta i.fa,
+.entry-footer i.fa {
+	padding-right: 5px;
+	color: #333;
+	font-size: 14px;
+}
+.widget-title,
+.widgettitle {
+	margin-bottom: 20px;
+	font-size: 22px;
+	display: inline-block;
+	font-weight: 600;
+}
+.widget_calendar table {
+	border-right: 1px solid #ddd;
+	border-top: 1px solid #ddd;
+	width: 100%;
+}
+.widget_calendar table td,
+.widget_calendar table th {
+	border-bottom: 1px solid #ddd;
+	border-left: 1px solid #ddd;
+	padding: 5px;
+	text-align: center;
+}
+.search-form input[type="search"],
+.post-password-form input[type="password"] {
+	height: 45px;
+	width: 100%;
+	border-bottom: 2px solid $brand-primary;
+	border-left: 2px solid $brand-primary;
+	border-top: 2px solid $brand-primary;
+	border-right: none;
+	padding: 10px;
+}
+.search-form input[type="submit"],
+.post-password-form input[type="submit"] {
+	background: $brand-primary;
+	border: 2px solid $brand-primary;
+	height: 45px;
+	padding: 0 18px;
+	margin-left: -5px;
+	font-weight: 900;
+	color: #fff;
+	-webkit-transition: .36s;
+	transition: .36s;
+}
+.search-form input[type="search"]:hover,
+.search-form input[type="search"]:focus,
+.post-password-form input[type="password"]:hover,
+.post-password-form input[type="password"]:focus {
+	outline: none;
+}
+.search-form input[type="submit"]:hover,
+.search-form inputt[type="submit"]:focus,
+.post-password-form input[type="submit"]:hover,
+.post-password-form input[type="submit"]:focus {
+	outline: none;
+}
+.search-form input[type="submit"]:hover,
+.post-password-form input[type="submit"]:hover {
+	background: $hover-color;
+}
+.widget_search .widget-title {
+	display: none
+}
+.widget_calendar table caption {
+	font-weight: 700;
+}
+.widget select {
+	width: 100%;
+	padding: 10px;
+	border: 2px solid #333;
+}
+.widget a {
+	-webkit-transition: .36s;
+	transition: .36s;
+}
+.widget a:hover {
+	color: #333
+}
+.widget ul {
+	line-height: 30px;
+	list-style: outside none none;
+	margin: 0;
+	padding: 0;
+}
+.widget ul ul {
+	padding-left: 15px
+}
+.widget ul ul ul {
+	padding-left: 10px
+}
+.rss-date {
+	color: #999;
+	font-size: 12px;
+	font-weight: 300;
+}
+.rssSummary {
+	font-size: 13px
+}
+.widget_rss cite {
+	color: #999;
+	font-size: 13px;
+	font-weight: 300;
+}
+.widget_rss li {
+	margin-bottom: 15px
+}
+.tagcloud a {
+	border: 2px solid #333;
+	padding: 10px;
+	display: inline-block;
+	margin-bottom: 5px;
+}
+.cat-links a {
+	text-decoration: underline;
+}
+.entry-content table {
+	border-bottom: 1px solid #ddd;
+	border-left: 1px solid #ddd;
+	margin-bottom: 20px;
+}
+.entry-content table td,
+.entry-content table th {
+	border-right: 1px solid #ddd;
+	border-top: 1px solid #ddd;
+	padding: 10px;
+}
+.entry-content dd,
+.comment-content dd {
+	margin-bottom: 15px;
+}
+.entry-content ul,
+.entry-content ol {
+	padding-left: 20px;
+	margin-bottom: 10px;
+}
+nav.navigation.posts-navigation a,
+nav.navigation.post-navigation a {
+	color: #333;
+}
+.navigation.posts-navigation .nav-links,
+.navigation.post-navigation .nav-links {
+	border-bottom: 1px solid #ddd;
+	border-top: 1px solid #ddd;
+	margin-bottom: 30px;
+	overflow: hidden;
+	padding: 10px 0;
+}
+.navigation.posts-navigation .nav-links > div,
+.navigation.post-navigation .nav-links > div {
+	float: left;
+	width: 49%;
+}
+.navigation.posts-navigation .nav-links > div.nav-next,
+.navigation.post-navigation .nav-links > div.nav-next {
+	float: right;
+	text-align: right;
+}
+.navigation.posts-navigation .nav-links a,
+.navigation.post-navigation .nav-links a {
+	display: inline-block;
+	padding: 5px 15px;
+	-webkit-transition: .36s;
+	transition: .36s;
+	font-weight: 600;
+}
+.navigation.posts-navigation .nav-links a:hover,
+.navigation.post-navigation .nav-links a:hover {
+	background: #333;
+	color: #fff;
+}
+.search-results article.page .entry-summary {
+	display: none
+}
+.error404 .widget_recent_entries {
+	margin-top: 40px
+}
+
+/*--------------------------------------------------------------
+## Comments
+--------------------------------------------------------------*/
+.comment-content a {
+	word-wrap: break-word;
+}
+
+.bypostauthor {
+	display: block;
+}
+.comments-area {
+	margin-top: 50px;
+}
+.comment-notes {
+	margin-bottom: 20px;
+}
+.comment-form label {
+	display: block;
+}
+.comment-form input,
+.comment-form textarea {
+	width: 100%;
+	padding: 8px 10px;
+}
+.comment-form .form-submit input[type=submit] {
+	background: $brand-primary;
+	color: #ffffff;
+	border: none;
+	padding: 10px 20px;
+	font-weight: 700;
+	letter-spacing: 2px;
+	width: auto;
+	margin-top: 15px;
+	border-radius: 0;
+}
+
+/*--------------------------------------------------------------
+# Infinite scroll
+--------------------------------------------------------------*/
+/* Globally hidden elements when Infinite Scroll is supported and in use. */
+.infinite-scroll .posts-navigation,
+.infinite-scroll.neverending .site-footer {
+	/* Theme Footer (when set to scrolling) */
+	display: none;
+}
+
+/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
+.infinity-end.neverending .site-footer {
+	display: block;
+}
+
+/*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
+.page-content .wp-smiley,
+.entry-content .wp-smiley,
+.comment-content .wp-smiley {
+	border: none;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding: 0;
+}
+
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object {
+	max-width: 100%;
+}
+
+/* Make sure logo link wraps around logo image. */
+.custom-logo-link {
+	display: inline-block;
+}
+
+/*--------------------------------------------------------------
+## Captions
+--------------------------------------------------------------*/
+.wp-caption {
+	margin-bottom: 1.5em;
+	max-width: 100%;
+}
+
+.wp-caption img[class*="wp-image-"] {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.wp-caption .wp-caption-text {
+	margin: 0.8075em 0;
+}
+
+.wp-caption-text {
+	text-align: center;
+}
+
+/*--------------------------------------------------------------
+## Galleries
+--------------------------------------------------------------*/
+.gallery {
+	margin-bottom: 1.5em;
+}
+
+.gallery-item {
+	display: inline-block;
+	text-align: center;
+	vertical-align: top;
+	width: 100%;
+}
+
+.gallery-columns-2 .gallery-item {
+	max-width: 50%;
+}
+
+.gallery-columns-3 .gallery-item {
+	max-width: 33.33%;
+}
+
+.gallery-columns-4 .gallery-item {
+	max-width: 25%;
+}
+
+.gallery-columns-5 .gallery-item {
+	max-width: 20%;
+}
+
+.gallery-columns-6 .gallery-item {
+	max-width: 16.66%;
+}
+
+.gallery-columns-7 .gallery-item {
+	max-width: 14.28%;
+}
+
+.gallery-columns-8 .gallery-item {
+	max-width: 12.5%;
+}
+
+.gallery-columns-9 .gallery-item {
+	max-width: 11.11%;
+}
+
+.gallery-caption {
+	display: block;
+}
+/*--------------------------------------------------------------
+# Comments CSS
+--------------------------------------------------------------*/
+.comments-title {
+	margin-bottom: 35px;
+	font-size: 26px;
+	color: #000000;
+}
+.comment-list {
+	max-width: 790px;
+}
+.comment-list,
+.children {
+	list-style: outside none none;
+	margin: 0;
+	padding: 0;
+}
+.says {
+	display: none;
+}
+.comment-author.vcard img {
+	float: left;
+	margin-right: 18px;
+}
+.comment-content {
+	color: #555555;
+	padding-left: 50px;
+}
+.comment-content table {
+	border-left: 1px solid #ddd;
+	border-top: 1px solid #ddd;
+	margin-bottom: 20px;
+}
+.comment-content table td,
+.comment-content table th {
+	border-bottom: 1px solid #ddd;
+	border-right: 1px solid #ddd;
+	padding: 10px;
+}
+.comment-content ul,
+.comment-content ol {
+	padding-left: 15px;
+	margin-bottom: 10px;
+}
+.comment-author.vcard img {
+	border-radius: 50%;
+	position: relative;
+	top: 10px;
+}
+b.fn {
+	color: #666;
+	font-size: 18px;
+	text-transform: capitalize;
+}
+b.fn a,
+.comments-area a {
+	color: #000;
+}
+.comment-list > li,
+.children article {
+	margin-bottom: 30px;
+}
+.comment-metadata {
+	font-size: 80%;
+	margin-bottom: 10px;
+}
+.reply {
+	text-align: right;
+}
+.reply a {
+	color: #666;
+	font-weight: 700;
+	position: relative;
+}
+.reply a:before {
+	position: absolute;
+	content: "\f064";
+	left: -18px;
+	top: 0;
+	font-family: FontAwesome;
+}
+.children {
+	padding-left: 25px;
+}
+.comment-form p > input,
+.comment-form p textarea {
+	border: 2px solid #cfcfcf;
+	color: #000;
+	font-size: 14px;
+	width: 100%;
+	padding: 10px 15px;
+	-webkit-transition: .3s;
+	transition: .3s;
+	resize: none;
+}
+.comment-reply-title {
+	margin-bottom: 30px;
+}
+.logged-in .comment-reply-title {
+	margin-bottom: 30px;
+}
+.comment-form p > input:focus,
+.comment-form p textarea:focus {
+	border-color: #333;
+	outline: none;
+}
+.comment-form {
+	padding-right: 10px;
+}
+.logged-in .form-submit {
+	bottom: 4px;
+	right: 0;
+}
+.logged-in .comment-form-comment textarea {
+	display: block;
+	width: 100%;
+	border-radius: 0;
+}
+.comment-form p > input[type="submit"] {
+	background: transparent;
+	color: #333;
+	text-transform: uppercase;
+	font-weight: 900;
+	width: auto;
+	margin-top: 10px;
+	border: 2px solid #333;
+}
+.bypostauthor {
+	padding: 2px;
+}
+
+/**
+	Page & Post Pagination Style
+ */
+.page-numbers {
+	padding: 12px 15px;
+	background: #eee;
+	display: inline-block;
+	color: #333;
+	font-size: 15px;
+	line-height: 1;
+	&.next {
+		border-radius: 0 4px 4px 0;
+		font-weight: 600;
+	}
+	&.prev {
+		border-radius: 4px 0 0 4px;
+		font-weight: 600;
+	}
+	&.current {
+		background: #1cd6c3;
+		color: #fff;
+	}
+	&:hover {
+		background: #1cd6c3;
+		color: #fff;
+	}
+}
