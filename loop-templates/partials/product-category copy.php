@@ -8,23 +8,29 @@ $product_categories = get_terms( 'download_category', array(
 	'hide_empty' => true,
 ) );
 
+//var_dump($product_categories);
+
 if ( ! empty( $product_categories )){
 	$p_categories = wp_list_pluck( $product_categories, 'name', 'term_id' ); 
 }
 ?>
 
 <div class="etbd-product-type">
-<div class="etbd-product-type-header no-border">
-    <h3 class="etbd-product-type-title">Category</h3>
-</div>
-<div class="popular-product-slide">
-    <div class="owl-popular-slide owl-carousel owl-theme">
+	<div class="etbd-product-type-header no-border">
+		<h3 class="etbd-product-type-title">Category</h3>
+	</div>
+	<div class="etbd-edproduct-type-body">
+		<div class="row">
+
 			<?php 
 			if (isset($p_categories)) {
+				
 				foreach ( $p_categories as $term_id => $p_category ) {
 					$category_link = get_term_link($term_id,'download_category');
 					?>
-					<div class="item">
+
+
+					<div class="col-md-2">
 						<a class="product-card adjust_small_post_height" href="<?php echo esc_url($category_link); ?>">  
 							<div class="product-card-img">
 								<?php 
@@ -38,17 +44,17 @@ if ( ! empty( $product_categories )){
 								</div>
 							</a>
 						</div>
+
+
+
 						<?php } 
+
 					}
 					?>
-        </div>
-    <div class="owl-theme">
-        <div class="owl-controls">
-            <div class="custom-nav owl-nav"></div>
-        </div>
-    </div>
-</div>
-</div>
+				</div>
+			</div>
+		</div>
+
 
 
 
