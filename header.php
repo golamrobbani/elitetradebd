@@ -16,7 +16,7 @@
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-title" content="<?php bloginfo( 'name' ); ?> - <?php bloginfo( 'description' ); ?>">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
-	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+	<link rel="pingback 123" href="<?php bloginfo( 'pingback_url' ); ?>">
 	<meta name="google-site-verification" content="Hbjk1ijgD4IzLHy5F6A3vdb9cKCC4c0uYZHTNLCraIs" />
 	<?php if( is_single()){
 	global $post; ?>
